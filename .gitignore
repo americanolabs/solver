@@ -1,0 +1,3 @@
+typechain
+**/local.db
+.env
