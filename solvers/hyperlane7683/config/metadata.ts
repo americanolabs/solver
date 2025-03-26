@@ -23,10 +23,10 @@ const metadata: Hyperlane7683Metadata = {
         name: "filterByTokenAndAmount",
         args: {
           "421614": {
-            [AddressZero]: BigInt(5e15),
+            [AddressZero]: BigInt(5e15)
           },
           "12177": {
-            [AddressZero]: BigInt(5e15),
+            [AddressZero]: BigInt(5e15)
           }
         },
       },
