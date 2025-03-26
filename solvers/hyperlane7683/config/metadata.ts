@@ -9,8 +9,16 @@ const metadata: Hyperlane7683Metadata = {
   protocolName: "Hyperlane7683",
   intentSources: [
     {
-      address: "0x05a8D0b7aBF2fa7deD41BaDAbEa785C5fB044aaB",
-      chainName: "arbitrumsepolia",
+      address: "0x878B4e79D5B2654C030f272632Df16747D0d9332",
+      chainName: "arbitrumsepolia"
+    },
+    {
+      address: "0xf614c6bF94b022E16BEF7dBecF7614FFD2b201d3",
+      chainName: "basesepolia"
+    },
+    {
+      address: "0xd07A45dD047c67662F9877acd60902A4EE0aB847",
+      chainName: "decaftestnet"
     }
   ],
   customRules: {
@@ -21,6 +29,12 @@ const metadata: Hyperlane7683Metadata = {
           "421614": {
             [AddressZero]: BigInt(5e15),
           },
+          "12177": {
+            [AddressZero]: BigInt(5e15),
+          },
+          "84532": {
+            [AddressZero]: BigInt(5e15),
+          }
         },
       },
       {

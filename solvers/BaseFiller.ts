@@ -6,6 +6,7 @@ import {
 } from "../config/index.js";
 import type { Logger } from "../logger.js";
 import type { BaseMetadata, BuildRules } from "./types.js";
+import { chainMetadata } from "../config/chainMetadata.js";
 
 export type ParsedArgs = {
   orderId: string;
@@ -53,7 +54,7 @@ export abstract class BaseFiller<
           parsedArgs,
           originChainName,
         );
-        const target = await this.retrieveTargetInfo(parsedArgs);
+        const target = await this.retrieveTargetInfo(parsedArgs);    
 
         this.log.info({
           msg: "Intent Indexed",
@@ -70,7 +71,30 @@ export abstract class BaseFiller<
       }
 
       const intent = await this.prepareIntent(parsedArgs);
+      
+      this.log.info({
+        msg: "Using Chain Information",
+        // data: chainMetadata[originChainName],
+        originChain: originChainName,
+        chainId: chainMetadata[originChainName]?.chainId,
+        rpcUrl: chainMetadata[originChainName]?.rpcUrls?.[0]?.http,
 
+      });
+      
+      this.log.info({
+        msg: "Using Chain Information",
+        // data: chainMetadata["decaftestnet"],
+        originChain: chainMetadata["decaftestnet"]?.name,
+        chainId: chainMetadata["decaftestnet"]?.chainId,
+        rpcUrl: chainMetadata["decaftestnet"]?.rpcUrls?.[0]?.http,
+      });
+
+      this.log.info({
+        msg: "LOG INTENT",
+        // data: chainMetadata["decaftestnet"],
+        intent: intent,
+      });
+      
       if (!intent.success) {
         this.log.error(`Failed evaluating filling Intent: ${intent.error}`);
         return;
