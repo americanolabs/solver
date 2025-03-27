@@ -14,6 +14,10 @@ const metadata: Hyperlane7683Metadata = {
     },
     {
       address: "0xC1d0d7C961daF74BECa71416359a92c59c8A8012",
+      chainName: "basesepolia"
+    },
+    {
+      address: "0xC1d0d7C961daF74BECa71416359a92c59c8A8012",
       chainName: "decaftestnet"
     }
   ],
@@ -23,6 +27,9 @@ const metadata: Hyperlane7683Metadata = {
         name: "filterByTokenAndAmount",
         args: {
           "421614": {
+            [AddressZero]: BigInt(5e15)
+          },
+          "84532": {
             [AddressZero]: BigInt(5e15)
           },
           "12177": {
