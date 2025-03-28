@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { chainMetadata as defaultChainMetadata, arbitrumsepolia } from "@hyperlane-xyz/registry";
+import { chainMetadata as defaultChainMetadata } from "@hyperlane-xyz/registry";
 
 import type { ChainMap, ChainMetadata } from "@hyperlane-xyz/sdk";
 import { ChainMetadataSchema } from "@hyperlane-xyz/sdk";
@@ -20,16 +20,13 @@ const customChainMetadata = {
   //   ],
   // },
   arbitrumsepolia: {
-    ...arbitrumsepolia,
-    mailbox: "0x598facE78a4302f11E3de0bee1894Da0b2Cb71F8",
-    chainId: 421614,
-    domainId: 421614,
-    name: 'arbitrumsepolia',
     rpcUrls: [{
-      http: `https://arbitrum-sepolia-rpc.publicnode.com`,
-      pagination: {
-        maxBlockRange: 3000,
-      }
+      http: `https://arb-sepolia.g.alchemy.com/v2/EB6qgZ7mRkqjUt7xoI_d3V_AjZuUkFpg`
+    }]
+  },
+  basesepolia: {
+    rpcUrls: [{
+      http: `https://base-sepolia.g.alchemy.com/v2/EB6qgZ7mRkqjUt7xoI_d3V_AjZuUkFpg`
     }]
   },
   decaftestnet: {
@@ -41,25 +38,9 @@ const customChainMetadata = {
     displayName: 'Decaf Testnet',
     mailbox: "0xD95d2F7C38bfA2f9d7A618474Bc619470f01001F",
     rpcUrls: [{
-      http: 'https://rollup-v1.optifi-agent.xyz',
-      pagination: {
-        maxBlockRange: 3000,
-      }
+      http: 'https://americano-rollup-v1.comingdotsoon.xyz'
     }],
-    "blockExplorers": [
-      {
-        "apiUrl": "https://api-sepolia.arbiscan.io/api",
-        "family": "etherscan",
-        "name": "Arbiscan",
-        "url": "https://sepolia.arbiscan.io"
-      },
-      {
-        "apiUrl": "https://api-sepolia.arbiscan.io/api",
-        "family": "etherscan",
-        "name": "Arbiscan",
-        "url": "https://sepolia.arbiscan.io"
-      }
-    ],
+    "blockExplorers": [],
     "blocks": {
       "confirmations": 1,
       "estimateBlockTime": 3,
@@ -73,7 +54,7 @@ const customChainMetadata = {
       "from": 0
     },
     "isTestnet": true,
-    "technicalStack": "arbitrumnitro",
+    "technicalStack": "arbitrumnitro"
   }
 };
 
