@@ -1,6 +1,9 @@
-# Solver Directory Overview
+# AmericanoLabs Intent Solver
 
-The solver directory contains the implementation of the Intent Solver, a TypeScript application designed to listen to blockchain events and process intents accordingly. This application plays a crucial role in handling events from different sources and executing the necessary actions based on those events.
+> [!NOTE]
+> This solver is designed for AmericanoLabs, enabling cross-chain staking with Open Intents and Hyperlane.
+
+The Intent Solver is a TypeScript application designed to listen to blockchain events and process staking-related intents. It plays a crucial role in managing staking and bridging operations based on user risk profiles (Conservative, Balanced, or Aggressive) and executing cross-chain transactions.
 
 ## Table of Contents
 
